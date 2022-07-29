@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script defer src="stock.js"></script> -->
+    <script defer src="variables.js"></script>
+    <script defer src="Fetch.js"></script>
+    <script defer src="javascript.js"></script>
+    <title>Simulador Stock</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Gestión de inventario</span>
+        </div>
+      </nav>
+
+      <div class="seleccion m-2">
+        <select id="selecMaterial">
+            <option value="all">Todos</option>
+            <option value="Galvanizado">Galvanizado</option>
+            <option value="Hierro">Hierro</option>
+            <option value="Aluminio">Aluminio</option>
+            <option value="Laton">Latón</option>
+
+        </select>
+    </div>
+
+    
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Material</th>
+            <th scope="col">Medida (mm)</th>
+            <th scope="col">Espesor (mm)</th>
+            <th scope="col">Peso (kg)</th>
+            <th scope="col">Valor (€)</th>
+            <th scope="col">Stock (uds.)</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody Id="filas">
+          <!-- <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
+            <td> <button type="button" class="btn btn-success">Cambiar stock</button> <button type="button" class="btn btn-danger">Eliminar</button></td>
+                
+          </tr> -->
+       
+        </tbody>
+      </table>
+
+      <div id="spinner" class="d-flex justify-content-center">
+        <div class="spinner-border"  role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      
+      <button id="btnElimina" type="button" class="btn btn-danger m-3">Eliminar</button>
+
+    <form class="m-2" action="">
+
+      <div class="material d-inline m-2">
+        <select id="selecMat">
+            <option value="Material">Material</option>
+            <option value="Galvanizado">Galvanizado</option>
+            <option value="Hierro">Hierro</option>
+            <option value="Aluminio">Aluminio</option>
+            <option value="Laton">Latón</option>
+        </select>
+      </div>
+
+      <div class="medida d-inline m-2">
+        <select id="selecMedida">
+            <option value="Medida">Medida</option>
+            <option value="3000x1500">3000x1500</option>
+            <option value="2500x1250">2500x1250</option>
+            <option value="2000x1000">2000x1000</option>
+        </select>
+      </div>
+
+      <div class="medida d-inline m-2 ">
+        
+        <select id="selecEspesor">
+            <option value="">Espesor</option>
+            <option value="1">1</option>
+            <option value="1">1,5</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="5">6</option>
+            <option value="5">7</option>
+            <option value="5">8</option>
+            <option value="5">9</option>
+            <option value="5">10</option>
+
+        </select>
+      </div>
+
+      <div class="d-inline input-group">
+        <input id="inputPeso" type="text" class="m-2" placeholder="Peso kg)" aria-label="Peso" aria-describedby="basic-addon1">
+      </div>
+
+      <div class="d-inline input-group">
+        <input id="inputValor" type="text" class="m-2" placeholder="Valor (€)" aria-label="Valor" aria-describedby="basic-addon1">
+      </div>
+
+      <div class="d-inline input-group">
+        <input id="inputStock" type="text" class="m-2" placeholder="Stock (uds.)" aria-label="Stock" aria-describedby="basic-addon1">
+      </div>
+
+      <button id="btnAgrega" type="button" class="btn btn-secondary m-2">Agregar nuevo producto</button>
+
+    </form>
+        
+      
+</body>
+</html>
